@@ -1,0 +1,6 @@
+{
+    "item.robmod.fancypickaxe": "Fancy Pickaxe",
+
+    "message.fancypickaxe.tooltip": "Mine with extra distance %s",
+    "message.fancypickaxe.change": "Change extra distance to %s"
+}
