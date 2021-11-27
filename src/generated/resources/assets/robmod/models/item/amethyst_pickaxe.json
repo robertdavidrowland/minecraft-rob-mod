@@ -1,32 +1,32 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "robmod:item/fancypickaxe0"
+    "layer0": "robmod:item/amethyst_pickaxe0"
   },
   "overrides": [
     {
       "predicate": {
         "robmod:distance": 0.0
       },
-      "model": "robmod:item/fancypickaxe0"
+      "model": "robmod:item/amethyst_pickaxe0"
     },
     {
       "predicate": {
         "robmod:distance": 1.0
       },
-      "model": "robmod:item/fancypickaxe1"
+      "model": "robmod:item/amethyst_pickaxe1"
     },
     {
       "predicate": {
         "robmod:distance": 2.0
       },
-      "model": "robmod:item/fancypickaxe2"
+      "model": "robmod:item/amethyst_pickaxe2"
     },
     {
       "predicate": {
         "robmod:distance": 3.0
       },
-      "model": "robmod:item/fancypickaxe3"
+      "model": "robmod:item/amethyst_pickaxe3"
     }
   ]
 }

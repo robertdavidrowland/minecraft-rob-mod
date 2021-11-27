@@ -23,15 +23,15 @@ import net.minecraft.world.phys.Vec3;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FancyPickaxeItem extends PickaxeItem {
-    public FancyPickaxeItem(Properties properties) {
-        super(Tiers.NETHERITE, 1, -2.8F, properties);
+public class AmthystPickaxeItem extends PickaxeItem {
+    public AmthystPickaxeItem(Properties properties) {
+        super(Tiers.IRON, 1, -2.8F, properties);
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
         super.appendHoverText(stack, level, components, flag);
-        components.add(new TranslatableComponent("message.fancypickaxe.tooltip", Integer.toString(getDistance(stack))).withStyle(ChatFormatting.DARK_PURPLE));
+        components.add(new TranslatableComponent("message.amethyst_pickaxe.tooltip", Integer.toString(getDistance(stack))).withStyle(ChatFormatting.DARK_PURPLE));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class FancyPickaxeItem extends PickaxeItem {
         distance = distance < 3 ? distance + 1 : 0;
         stack.getTag().putInt("distance", distance);
         if (level.isClientSide()) {
-            player.sendMessage(new TranslatableComponent("message.fancypickaxe.change", Integer.toString(distance)).withStyle(ChatFormatting.DARK_PURPLE), Util.NIL_UUID);
+            player.sendMessage(new TranslatableComponent("message.amethyst_pickaxe.change", Integer.toString(distance)).withStyle(ChatFormatting.DARK_PURPLE), Util.NIL_UUID);
         }
         return InteractionResultHolder.success(stack);
     }

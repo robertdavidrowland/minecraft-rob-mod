@@ -3,7 +3,6 @@ package com.robertdavidrowland.robmod.datagen;
 import com.robertdavidrowland.robmod.RobMod;
 import com.robertdavidrowland.robmod.setup.Registration;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -17,24 +16,17 @@ public class Items extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        singleTexture(
-//                Registration.FANCYPICKAXE.get().getRegistryName().getPath(),
-//                new ResourceLocation("item/handheld"),
-//                "layer0",
-//                new ResourceLocation(RobMod.MODID, "item/fancypickaxe")
-//        );
-
-        getBuilder(Registration.FANCYPICKAXE.get().getRegistryName().getPath())
+        getBuilder(Registration.AMETHYST_PICKAXE.get().getRegistryName().getPath())
                 .parent(getExistingFile(mcLoc("item/handheld")))
-                .texture("layer0", "item/fancypickaxe0")
-                .override().predicate(DISTANCE_PROPERTY, 0).model(createFancyPickaxeModel(0)).end()
-                .override().predicate(DISTANCE_PROPERTY, 1).model(createFancyPickaxeModel(1)).end()
-                .override().predicate(DISTANCE_PROPERTY, 2).model(createFancyPickaxeModel(2)).end()
-                .override().predicate(DISTANCE_PROPERTY, 3).model(createFancyPickaxeModel(3)).end();
+                .texture("layer0", "item/amethyst_pickaxe0")
+                .override().predicate(DISTANCE_PROPERTY, 0).model(createAmethystPickaxeModel(0)).end()
+                .override().predicate(DISTANCE_PROPERTY, 1).model(createAmethystPickaxeModel(1)).end()
+                .override().predicate(DISTANCE_PROPERTY, 2).model(createAmethystPickaxeModel(2)).end()
+                .override().predicate(DISTANCE_PROPERTY, 3).model(createAmethystPickaxeModel(3)).end();
     }
 
-    private ItemModelBuilder createFancyPickaxeModel(int suffix) {
-        return getBuilder("fancypickaxe" + suffix).parent(getExistingFile(mcLoc("item/handheld")))
-                .texture("layer0", "item/fancypickaxe" + suffix);
+    private ItemModelBuilder createAmethystPickaxeModel(int suffix) {
+        return getBuilder("amethyst_pickaxe" + suffix).parent(getExistingFile(mcLoc("item/handheld")))
+                .texture("layer0", "item/amethyst_pickaxe" + suffix);
     }
 }

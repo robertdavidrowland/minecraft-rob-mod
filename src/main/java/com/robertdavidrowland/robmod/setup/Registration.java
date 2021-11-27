@@ -1,7 +1,6 @@
 package com.robertdavidrowland.robmod.setup;
 
-import com.robertdavidrowland.robmod.items.FancyPickaxeItem;
-import net.minecraft.world.item.BlockItem;
+import com.robertdavidrowland.robmod.items.AmthystPickaxeItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -16,11 +15,14 @@ import static com.robertdavidrowland.robmod.RobMod.MODID;
 public class Registration {
 
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
     public static void init() {
-        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        ITEMS.register(bus);
+        BLOCKS.register(bus);
     }
 
-    public static final RegistryObject<FancyPickaxeItem> FANCYPICKAXE = ITEMS.register("fancypickaxe", () -> new FancyPickaxeItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+    public static final RegistryObject<AmthystPickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new AmthystPickaxeItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
 }
