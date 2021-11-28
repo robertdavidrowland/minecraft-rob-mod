@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "robmod",
+  "pattern": [
+    " c ",
+    "ctc",
+    " c "
+  ],
+  "key": {
+    "t": {
+      "item": "robmod:amethyst_pickaxe"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "robmod:charged_pickaxe"
+  }
+}

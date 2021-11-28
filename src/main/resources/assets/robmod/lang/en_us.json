@@ -1,6 +1,10 @@
 {
     "item.robmod.amethyst_pickaxe": "Amethyst Pickaxe",
+    "item.robmod.charged_pickaxe": "Charged Pickaxe",
 
-    "message.amethyst_pickaxe.tooltip": "Mine with extra distance %s",
-    "message.amethyst_pickaxe.change": "Change extra distance to %s"
+    "message.amethyst_pickaxe.tooltip": "Mine with power %s",
+    "message.amethyst_pickaxe.change": "Change power to %s",
+
+    "message.charged_pickaxe.tooltip": "Mine with power %s",
+    "message.charged_pickaxe.change": "Change power to %s"
 }

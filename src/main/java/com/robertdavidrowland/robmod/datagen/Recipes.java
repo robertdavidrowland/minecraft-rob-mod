@@ -27,5 +27,16 @@ public class Recipes extends RecipeProvider {
                 .group("robmod")
                 .unlockedBy("sticks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Registration.CHARGED_PICKAXE.get())
+                .pattern(" c ")
+                .pattern("ctc")
+                .pattern(" c ")
+                .define('t', Registration.AMETHYST_PICKAXE.get())
+                .define('c', Items.COPPER_INGOT)
+                .group("robmod")
+                .unlockedBy("copper_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .unlockedBy("amethyst_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(Registration.AMETHYST_PICKAXE.get()))
+                .save(consumer);
     }
 }

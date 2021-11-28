@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "robmod:item/charged_pickaxe0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "robmod:distance": 0.0
+      },
+      "model": "robmod:item/charged_pickaxe0"
+    },
+    {
+      "predicate": {
+        "robmod:distance": 1.0
+      },
+      "model": "robmod:item/charged_pickaxe1"
+    },
+    {
+      "predicate": {
+        "robmod:distance": 2.0
+      },
+      "model": "robmod:item/charged_pickaxe2"
+    },
+    {
+      "predicate": {
+        "robmod:distance": 3.0
+      },
+      "model": "robmod:item/charged_pickaxe3"
+    }
+  ]
+}

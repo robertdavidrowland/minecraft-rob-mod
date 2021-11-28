@@ -23,8 +23,8 @@ import net.minecraft.world.phys.Vec3;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class AmthystPickaxeItem extends PickaxeItem {
-    public AmthystPickaxeItem(Properties properties) {
+public class AmethystPickaxeItem extends PickaxeItem {
+    public AmethystPickaxeItem(Properties properties) {
         super(Tiers.IRON, 1, -2.8F, properties);
     }
 
