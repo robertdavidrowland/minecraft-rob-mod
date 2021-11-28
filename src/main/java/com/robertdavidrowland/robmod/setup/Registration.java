@@ -1,5 +1,6 @@
 package com.robertdavidrowland.robmod.setup;
 
+import com.robertdavidrowland.robmod.items.AmethystAxeItem;
 import com.robertdavidrowland.robmod.items.AmethystPickaxeItem;
 import com.robertdavidrowland.robmod.items.ChargedPickaxeItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +25,7 @@ public class Registration {
         BLOCKS.register(bus);
     }
 
+    public static final RegistryObject<AmethystAxeItem> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AmethystAxeItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
     public static final RegistryObject<AmethystPickaxeItem> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new AmethystPickaxeItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
     public static final RegistryObject<ChargedPickaxeItem> CHARGED_PICKAXE = ITEMS.register("charged_pickaxe", () -> new ChargedPickaxeItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 

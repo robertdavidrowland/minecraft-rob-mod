@@ -1,6 +1,7 @@
 package com.robertdavidrowland.robmod.setup;
 
 import com.robertdavidrowland.robmod.RobMod;
+import com.robertdavidrowland.robmod.items.AmethystAxeItem;
 import com.robertdavidrowland.robmod.items.AmethystPickaxeItem;
 import com.robertdavidrowland.robmod.items.ChargedPickaxeItem;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -18,6 +19,10 @@ public class ClientSetup {
     }
 
     public static void initTestItemOverrides() {
+        AmethystAxeItem amethystAxeItem = Registration.AMETHYST_AXE.get();
+        ItemProperties.register(amethystAxeItem, DISTANCE_PROPERTY,
+                (stack, level, entity, damage) -> amethystAxeItem.getDistance(stack));
+
         AmethystPickaxeItem amethystPickaxeItem = Registration.AMETHYST_PICKAXE.get();
         ItemProperties.register(amethystPickaxeItem, DISTANCE_PROPERTY,
                 (stack, level, entity, damage) -> amethystPickaxeItem.getDistance(stack));

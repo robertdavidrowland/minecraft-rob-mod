@@ -16,6 +16,14 @@ public class Items extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        getBuilder(Registration.AMETHYST_AXE.get().getRegistryName().getPath())
+                .parent(getExistingFile(mcLoc("item/handheld")))
+                .texture("layer0", "item/amethyst_axe0")
+                .override().predicate(DISTANCE_PROPERTY, 0).model(createAmethystAxeModel(0)).end()
+                .override().predicate(DISTANCE_PROPERTY, 1).model(createAmethystAxeModel(1)).end()
+                .override().predicate(DISTANCE_PROPERTY, 2).model(createAmethystAxeModel(2)).end()
+                .override().predicate(DISTANCE_PROPERTY, 3).model(createAmethystAxeModel(3)).end();
+
         getBuilder(Registration.AMETHYST_PICKAXE.get().getRegistryName().getPath())
                 .parent(getExistingFile(mcLoc("item/handheld")))
                 .texture("layer0", "item/amethyst_pickaxe0")
@@ -31,6 +39,11 @@ public class Items extends ItemModelProvider {
                 .override().predicate(DISTANCE_PROPERTY, 1).model(createChargedPickaxeModel(1)).end()
                 .override().predicate(DISTANCE_PROPERTY, 2).model(createChargedPickaxeModel(2)).end()
                 .override().predicate(DISTANCE_PROPERTY, 3).model(createChargedPickaxeModel(3)).end();
+    }
+
+    private ItemModelBuilder createAmethystAxeModel(int suffix) {
+        return getBuilder("amethyst_axe" + suffix).parent(getExistingFile(mcLoc("item/handheld")))
+                .texture("layer0", "item/amethyst_axe" + suffix);
     }
 
     private ItemModelBuilder createAmethystPickaxeModel(int suffix) {

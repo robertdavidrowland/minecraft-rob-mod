@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "robmod",
+  "pattern": [
+    " xx",
+    " sx",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "robmod:amethyst_axe"
+  }
+}

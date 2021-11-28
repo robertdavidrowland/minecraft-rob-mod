@@ -1,9 +1,26 @@
 {
+    "item.robmod.amethyst_axe": "Amethyst Axe",
+    "item.robmod.amethyst_hoe": "Amethyst Hoe",
     "item.robmod.amethyst_pickaxe": "Amethyst Pickaxe",
+    "item.robmod.amethyst_shovel": "Amethyst Shovel",
+    "item.robmod.amethyst_sword": "Amethyst Sword",
+
     "item.robmod.charged_pickaxe": "Charged Pickaxe",
+
+    "message.amethyst_axe.tooltip": "Chop with power %s",
+    "message.amethyst_axe.change": "Change power to %s",
+
+    "message.amethyst_hoe.tooltip": "Weed with power %s",
+    "message.amethyst_hoe.change": "Change power to %s",
 
     "message.amethyst_pickaxe.tooltip": "Mine with power %s",
     "message.amethyst_pickaxe.change": "Change power to %s",
+
+    "message.amethyst_shovel.tooltip": "Dig with power %s",
+    "message.amethyst_shovel.change": "Change power to %s",
+
+    "message.amethyst_sword.tooltip": "Attack with power %s",
+    "message.amethyst_sword.change": "Change power to %s",
 
     "message.charged_pickaxe.tooltip": "Mine with power %s",
     "message.charged_pickaxe.change": "Change power to %s"

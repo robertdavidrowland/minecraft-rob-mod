@@ -18,6 +18,16 @@ public class Recipes extends RecipeProvider {
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(Registration.AMETHYST_AXE.get())
+                .pattern(" xx")
+                .pattern(" sx")
+                .pattern(" s ")
+                .define('x', Items.AMETHYST_SHARD)
+                .define('s', Items.STICK)
+                .group("robmod")
+                .unlockedBy("sticks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(Registration.AMETHYST_PICKAXE.get())
                 .pattern("xxx")
                 .pattern(" s ")
